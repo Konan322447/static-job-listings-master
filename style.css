@@ -47,6 +47,7 @@ body{
     box-shadow: 5px 17px 12px rgba(0, 0, 0, 0.1);
     padding: 3% 3%;
     position: relative;
+    border-radius: 0.3rem;
 }
 .listitem::before{
     content: '';
@@ -58,6 +59,7 @@ body{
     left: 0;
     border-top-left-radius: 0.3rem;
     border-bottom-left-radius: 0.3rem;
+    transition: background 0.3s ease;
 }
 .listitem.highlighted::before{
     background: hsl(180, 68%, 25%);
@@ -70,11 +72,16 @@ body{
 .desc{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 .desc h1{
     font-weight: 700;
     font-size: 20px;
+    transition: color 0.3s ease;
+}
+.desc h1:hover{
+    color: hsl(180, 68%, 25%);
+    cursor: pointer;
 }
 .desc-top{
     display: flex;
@@ -123,4 +130,10 @@ body{
     background: hsl(180, 52%, 96%);
     padding: 0.5rem 1rem;
     border-radius: 0.2rem;
+    transition: all 0.3s ease;
+}
+.item-right p:hover{
+    background: hsl(180, 68%, 25%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
 }
