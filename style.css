@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'League Spartan';
+    src: url(fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan';
+    font-size: 15px;
+    font-weight: 500;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100dvw;
+    min-height: 100dvh;
+}
+.top{
+    height: 20dvh;
+    width: 100dvw;
+    background-image: url(images/bg-header-desktop.svg);
+    background-color:  hsl(180, 29%, 50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.listings{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    background: hsl(180, 52%, 96%);
+    width: 100%;
+    min-height: 100dvh;
+    gap: 1.5rem;
+}
+.listitem{
+    display: flex;
+    justify-content: space-between;
+    background: hsl(0, 0%, 100%);
+    box-shadow: 5px 17px 12px rgba(0, 0, 0, 0.1);
+    padding: 3% 3%;
+    position: relative;
+}
+.listitem::before{
+    content: '';
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+.listitem.highlighted::before{
+    background: hsl(180, 68%, 25%);
+}
+.item-left{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.desc h1{
+    font-weight: 700;
+    font-size: 20px;
+}
+.desc-top{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.desc-top p{
+    color: hsl(180, 29%, 50%);
+    font-weight: 600;
+}
+#new{
+    color: hsl(0, 0%, 100%);
+    background: hsl(180, 29%, 50%);
+    padding: 0.3rem 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#featured{
+    color: hsl(0, 0%, 100%);
+    background: hsl(180, 14%, 20%);
+    padding: 0.3rem 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.desc-bottom{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: hsl(180, 8%, 52%);
+}
+.desc-bottom span{
+    transform: translateY(-20%);
+}
+.item-right{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.item-right p{
+    color: hsl(180, 68%, 25%);
+    background: hsl(180, 52%, 96%);
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+}
